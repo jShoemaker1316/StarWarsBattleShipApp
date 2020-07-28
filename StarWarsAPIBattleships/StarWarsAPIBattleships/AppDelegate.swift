@@ -5,6 +5,7 @@
 //  Created by Jonathan Shoemaker on 7/25/20.
 //  Copyright © 2020 JonathanShoemaker. All rights reserved.
 //
+//https://www.raywenderlich.com/6587213-alamofire-5-tutorial-for-ios-getting-started
 
 import UIKit
 

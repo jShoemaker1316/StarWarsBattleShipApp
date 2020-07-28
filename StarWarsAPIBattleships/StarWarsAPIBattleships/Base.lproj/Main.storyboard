@@ -7,7 +7,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Root View Controller-->
+        <!--Main Table View Controller-->
         <scene sceneID="nqW-2U-Ulc">
             <objects>
                 <tableViewController id="yOV-XG-e5O" customClass="MainTableViewController" customModule="StarWarsAPIBattleships" customModuleProvider="target" sceneMemberID="viewController">
@@ -54,7 +54,7 @@
                             <outlet property="delegate" destination="yOV-XG-e5O" id="FL7-iL-J9v"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Root View Controller" id="8Bn-7x-I1V"/>
+                    <navigationItem key="navigationItem" id="8Bn-7x-I1V"/>
                     <connections>
                         <outlet property="searchBar" destination="bCE-f8-0Si" id="bVW-0Z-dd5"/>
                     </connections>

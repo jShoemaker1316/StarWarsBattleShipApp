@@ -15,6 +15,8 @@
 		1092886A24CCB5FD00077B81 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1092886824CCB5FD00077B81 /* Main.storyboard */; };
 		1092886C24CCB60100077B81 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1092886B24CCB60100077B81 /* Assets.xcassets */; };
 		1092886F24CCB60100077B81 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1092886D24CCB60100077B81 /* LaunchScreen.storyboard */; };
+		10DC1B5824CF3195005C2F5F /* Film.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10DC1B5724CF3195005C2F5F /* Film.swift */; };
+		10DC1B5A24CF333C005C2F5F /* Films.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10DC1B5924CF333C005C2F5F /* Films.swift */; };
 		67485F4B78DF13E419D08CAA /* Pods_StarWarsAPIBattleships.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81115C25D74F2E07B041B955 /* Pods_StarWarsAPIBattleships.framework */; };
 /* End PBXBuildFile section */
 
@@ -29,6 +31,8 @@
 		1092886B24CCB60100077B81 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1092886E24CCB60100077B81 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1092887024CCB60100077B81 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		10DC1B5724CF3195005C2F5F /* Film.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Film.swift; sourceTree = "<group>"; };
+		10DC1B5924CF333C005C2F5F /* Films.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Films.swift; sourceTree = "<group>"; };
 		3B3830AA99679F781C152F26 /* Pods-StarWarsAPIBattleships.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StarWarsAPIBattleships.debug.xcconfig"; path = "Target Support Files/Pods-StarWarsAPIBattleships/Pods-StarWarsAPIBattleships.debug.xcconfig"; sourceTree = "<group>"; };
 		49C49F38089158E894BB1808 /* Pods-StarWarsAPIBattleships.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StarWarsAPIBattleships.release.xcconfig"; path = "Target Support Files/Pods-StarWarsAPIBattleships/Pods-StarWarsAPIBattleships.release.xcconfig"; sourceTree = "<group>"; };
 		81115C25D74F2E07B041B955 /* Pods_StarWarsAPIBattleships.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_StarWarsAPIBattleships.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -59,6 +63,8 @@
 			isa = PBXGroup;
 			children = (
 				107C0B5B24CE811B009D4074 /* Displayable.swift */,
+				10DC1B5724CF3195005C2F5F /* Film.swift */,
+				10DC1B5924CF333C005C2F5F /* Films.swift */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -229,7 +235,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				1092886724CCB5FD00077B81 /* MainTableViewController.swift in Sources */,
+				10DC1B5824CF3195005C2F5F /* Film.swift in Sources */,
 				1092886324CCB5FD00077B81 /* AppDelegate.swift in Sources */,
+				10DC1B5A24CF333C005C2F5F /* Films.swift in Sources */,
 				1092886524CCB5FD00077B81 /* SceneDelegate.swift in Sources */,
 				107C0B5C24CE811B009D4074 /* Displayable.swift in Sources */,
 				107C0B5A24CE810D009D4074 /* DetailViewController.swift in Sources */,
