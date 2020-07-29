@@ -192,6 +192,18 @@
                         <viewLayoutGuide key="safeArea" id="1kC-dq-nCB"/>
                     </view>
                     <navigationItem key="navigationItem" id="bxg-kS-iqv"/>
+                    <connections>
+                        <outlet property="item1Label" destination="5nu-Fj-Qjs" id="pBl-8h-f47"/>
+                        <outlet property="item1TitleLabel" destination="2yY-aJ-UlV" id="2lR-i3-WUV"/>
+                        <outlet property="item2Label" destination="449-JY-Ghq" id="eLK-o5-gLa"/>
+                        <outlet property="item2TitleLabel" destination="TXe-4J-RIM" id="pR3-U6-Ljd"/>
+                        <outlet property="item3Label" destination="OkH-59-TRG" id="IQE-Cz-YFn"/>
+                        <outlet property="item3TitleLabel" destination="ehT-lm-oCw" id="ZQ3-9U-pk5"/>
+                        <outlet property="listTableView" destination="SaD-QO-0Ee" id="x9t-Ia-gtD"/>
+                        <outlet property="listTitleLabel" destination="QSc-o3-zsB" id="XHc-KN-WL4"/>
+                        <outlet property="subtitleLabel" destination="9zu-3z-awc" id="Zux-MH-6xx"/>
+                        <outlet property="titleLabel" destination="bL0-S6-3aU" id="r4V-RN-7tw"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WZ0-PC-zN5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

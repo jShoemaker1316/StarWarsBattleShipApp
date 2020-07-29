@@ -16,6 +16,8 @@ class MainTableViewController: UITableViewController {
     var items: [Displayable] = []
 //15 register the selected item. You’ll store the currently-selected film to this property
     var selectedItem: Displayable?
+//28 When the user cancels a search, you want to redisplay the list of films. You could fetch it again from the API, but that’s a poor design practice. Instead, you’re going to cache the list of films to make displaying it again quick and efficient. Add the following property at the top of the class to cache the list of films:
+    var films: [Film] = []
   
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -60,9 +62,17 @@ class MainTableViewController: UITableViewController {
 // MARK: - UISearchBarDelegate
 extension MainTableViewController: UISearchBarDelegate {
   func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+//27 Start by adding the following code to searchBarSearchButtonClicked(_:). This code gets the text typed into the search bar and calls the new searchStarships(for:) method you just implemented.
+    guard let shipName = searchBar.text else { return }
+    searchStarships(for: shipName)
   }
   
   func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
+//30 Now, add the following code to searchBarCancelButtonClicked(_:) Here, you remove any search text entered, hide the keyboard using resignFirstResponder() and reload the table view, which causes it to show films again.
+    searchBar.text = nil
+    searchBar.resignFirstResponder()
+    items = films
+    tableView.reloadData()
   }
 }
 
@@ -78,6 +88,8 @@ extension MainTableViewController {
           //print(films.all[0].title)
             self.items = films.all
             self.tableView.reloadData()
+//29 Next, add the following code after the guard statement in fetchFilms(). This saves away the list for films for easy access later.
+            self.films = films.all
         }
         
         //1 Alamofire uses namespacing, so you need to prefix all calls that you use with AF. request(_:method:parameters:encoding:headers:interceptor:) accepts the endpoint for your data. It can accept more parameters, but for now, you’ll just send the URL as a string and use the default parameter values.
@@ -92,5 +104,23 @@ extension MainTableViewController {
             //print(films.all[0].title)
         //}
     }
+    
+//26 Next, open MainTableViewController.swift and, after fetchFilms(), add the following method for searching for starships. Executing this request results in a URL https://swapi.dev/api/starships?search={name} where {name} is the search query passed in.
+    func searchStarships(for name: String) {
+      // 1Sets the URL that you’ll use to access the starship data.
+      let url = "https://swapi.dev/api/starships"
+      // 2Sets the key-value parameters that you’ll send to the endpoint.
+      let parameters: [String: String] = ["search": name]
+      // 3Here, you’re making a request like before, but this time you’ve added parameters. You’re also performing a validate and decoding the response into Starships.
+      AF.request(url, parameters: parameters)
+        .validate()
+        .responseDecodable(of: Starships.self) { response in
+          // 4Finally, once the request completes, you assign the list of starships as the table view’s data and reload the table view.
+          guard let starships = response.value else { return }
+          self.items = starships.all
+          self.tableView.reloadData()
+      }
+    }
+    
 }
 
